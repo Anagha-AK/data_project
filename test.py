@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data=pd.read_csv('data.csv')
+data=data.dropna()
 print("Full data:\n",data)
 data['result']=data['marks']>40
 print("\nTop student:\n",data.loc[data['marks'].idxmax()])
